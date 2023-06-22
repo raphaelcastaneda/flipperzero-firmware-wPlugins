@@ -40,3 +40,12 @@
 [submodule "lib/stm32wb_copro"]
 	path = lib/stm32wb_copro
 	url = https://github.com/flipperdevices/stm32wb_copro.git
+[submodule "3rd_party/Z4rse-flipperzero-camera"]
+  path = 3rd_party/Z4rse-flipperzero-camera
+  url = https://github.com/Z4urse/flipperzero-camera.git
+[submodule "3rd_party/mayhem-companion-apps"]
+  path = 3rd_party/mayhem-companion-apps
+  url = https://github.com/eried/flipperzero-mayhem.git
+[submodule "3rd_party/flipperzero-wifi-marauder"]
+  path = 3rd_party/flipperzero-wifi-marauder
+  url = https://github.com/0xchocolate/flipperzero-wifi-marauder.git

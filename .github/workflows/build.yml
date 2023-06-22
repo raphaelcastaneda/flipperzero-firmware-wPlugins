@@ -1,0 +1,28 @@
+name: "Build Mayhem Extensions"
+on:
+  push:
+    branches:
+      - 420
+jobs:
+  fbt-build-action:
+    runs-on: ubuntu-latest
+    name: 'fbt build for mayhem apps'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Configure fbt toolchain
+        shell: bash
+        run: |
+          source scripts/toolchain/fbtenv/fbtenv.sh
+      - name: Build faps
+        shell: bash
+        run: |
+          ./fbt faps
+      - name: Upload app artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          path: |
+            build/**/.extapps/ESP32*.fap
+            build/**/.extapps/MAYHEM*.fap
