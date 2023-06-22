@@ -15,7 +15,7 @@ jobs:
       - name: Configure fbt toolchain
         shell: bash
         run: |
-          source scripts/toolchain/fbtenv/fbtenv.sh
+          source scripts/toolchain/fbtenv.sh
       - name: Build faps
         shell: bash
         run: |
